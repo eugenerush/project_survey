@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Последние опросы</h1>
+    {% if survey_list %}
+        <ul>
+            {% for survey in survey_list %}
+                <li>{{ survey.title }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Опросы не найдены.</p>
+    {% endif %}
+</body>
+</html>
